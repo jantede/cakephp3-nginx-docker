@@ -22,3 +22,10 @@ services:
     command: install
     volumes:
     - ./app:/app
+  mariadb:
+    image: mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=cakephp
+    ports:
+    - "4306:3306"
